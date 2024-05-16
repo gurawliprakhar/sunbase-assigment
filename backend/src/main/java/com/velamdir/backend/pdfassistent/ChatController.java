@@ -20,7 +20,7 @@ public class ChatController {
         this.conversationalRetrievalChain = conversationalRetrievalChain;
     }
 
-    @PostMapping
+    @PostMapping("/send-message")
     public String chatWithPdf(@RequestBody String text) {
         var answer = conversationalRetrievalChain.execute(text);
         log.debug("Answer is - {}", answer);
