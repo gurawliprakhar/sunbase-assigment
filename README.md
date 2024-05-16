@@ -44,15 +44,12 @@ This project implements a Basic Retrieval-Augmented Generation (RAG) AI chatbot 
 │   │   │       └── application.properties
 │   └── pom.xml
 ├── frontend
-│   ├── public
-│   │   └── index.html
-│   ├── src
-│   │   ├── components
-│   │   │   ├── Chat.js
-│   │   │   ├── Upload.js
-│   │   │   └── App.js
-│   │   └── index.js
-│   └── package.json
+│   |
+|   |__ public
+|      |
+|      |__ index.html
+|      |__ script.js 
+|      |__ styles.css
 └── README.md
 ```
 
