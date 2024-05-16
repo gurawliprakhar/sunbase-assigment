@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Model Training & Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RAG Model Training & Chat Interface</h1>
+        <div class="upload-section">
+            <h2>Upload Document</h2>
+            <input type="file" id="document-upload" accept=".pdf,.docx">
+            <button onclick="uploadDocument()">Upload</button>
+        </div>
+        <div class="or">OR</div>
+        <div class="text-input">
+            <h2>Input Text</h2>
+            <textarea id="text-input" rows="5" placeholder="Enter text here..."></textarea>
+            <button onclick="submitText()">Submit</button>
+        </div>
+        <div class="chat-interface">
+            <h2>Chat Interface</h2>
+            <div id="chat-messages"></div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
