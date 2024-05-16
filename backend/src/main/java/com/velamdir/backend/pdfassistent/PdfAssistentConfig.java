@@ -50,7 +50,7 @@ public class PdfAssistentConfig {
     @Bean
     public ConversationalRetrievalChain conversationalRetrievalChain() {
         return ConversationalRetrievalChain.builder()
-                .chatLanguageModel(OpenAiChatModel.withApiKey("sk-proj-U3XeJHZb8g7U4NMsz9p3T3BlbkFJ7vmlhfazt6XInllY9Hpm"))
+                .chatLanguageModel(OpenAiChatModel.withApiKey("github not allowing"))
                 .retriever(EmbeddingStoreRetriever.from(astraDbEmbeddingStore(), embeddingModel()))
                 .build();
     }
