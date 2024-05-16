@@ -3,7 +3,7 @@ This repository contains source code for the PDF Assistant application, that can
 
 It uses the LangChain4J framework to interact with OpenAI LLM, AstraDB to store the embeddings, and Spring Boot as the framework to create REST API.
 
-Link to Video Tutorial: https://youtu.be/mvvRXu_KJSU
+
 
 You can find the application running against Ollama with Llama3 and PGVector Embedding store in the branch - ollama_with_pgvector
 
