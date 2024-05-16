@@ -1,62 +1,29 @@
-# Basic RAG Model AI Chatbot
+PDF Assistant with Langchain4J, Spring Boot and AstraDB
+This repository contains source code for the PDF Assistant application, that can answer questions based on the information contained in a given PDF.
 
-This project is a basic RAG (Retrieval-Augmented Generation) model AI chatbot implemented with a Java backend and a simple HTML/CSS/JS frontend. The backend is built using Spring Boot and interacts with a vector database (e.g., Supabase or Zilliz) to store embeddings. The frontend provides an interface to upload text or files for training the model and a chat interface to interact with the chatbot.
+It uses the LangChain4J framework to interact with OpenAI LLM, AstraDB to store the embeddings, and Spring Boot as the framework to create REST API.
 
-## Features
-- Upload text or files to generate embeddings and store them in a vector database.
-- Simple chat interface to interact with the chatbot.
+Link to Video Tutorial: https://youtu.be/mvvRXu_KJSU
 
-## Getting Started
+You can find the application running against Ollama with Llama3 and PGVector Embedding store in the branch - ollama_with_pgvector
 
-### Prerequisites
-- Java 11 or higher
-- Maven
-- Supabase or Zilliz account (or any vector database of your choice)
+Here is the question I asked our application
 
-### Setup
+What is cassandra, why to use Cassandra ?
+And here is the answer provided by our application
 
-1. Clone the repository:
+**What is Cassandra?**
 
-   ```bash
-   git clone https://github.com/yourusername/sunbase-assignment.git
-   cd sunbase-assignment
-Configure the database connection in src/main/resources/application.properties.
+Cassandra is a NoSQL, distributed, multi-master database management system designed to handle large amounts of data across many commodity servers with minimal overhead. It is a key-value store that can support high traffic and massive scalability.
 
-Build and run the Spring Boot application:
+**Why use Cassandra?**
 
-bash
-Copy code
-mvn clean install
-mvn spring-boot:run
-Open src/main/resources/static/upload.html and src/main/resources/static/chat.html in your browser to use the upload and chat interfaces.
+Here are some reasons why you might choose to use Cassandra:
 
-Project Structure
-Backend: Java (Spring Boot)
+1. **Scalability**: Cassandra is designed to scale horizontally, meaning it can easily handle increasing loads by adding more nodes to the cluster.
+2. **Fault Tolerance**: Cassandra is built to tolerate node failures and can continue running even if a significant number of nodes go down.
+3. **High Throughput**: Cassandra can handle high traffic and large amounts of data with minimal latency.
+4. **Flexibility**: Cassandra supports various data models, including key-value pairs, row-based data, and document-oriented data.
+5. **Low Latency**: Cassandra is designed to minimize latency by allowing write operations to be executed in parallel across multiple nodes.
 
-Controllers to handle API requests
-Service to process text and file uploads, generate embeddings, and handle chat interactions
-Repository to interact with the database
-Frontend: HTML/CSS/JS
-
-upload.html for uploading text or files
-chat.html for chatting with the AI
-API Endpoints
-POST /api/uploadText - Upload text for generating embeddings
-POST /api/uploadFile - Upload file for generating embeddings
-POST /api/chat - Chat with the AI chatbot
-License
-This project is licensed under the MIT License.
-
-bash
-Copy code
-
-### .gitignore
-
-```gitignore
-/target
-/*.log
-/*.tmp
-/.idea
-/.vscode
-/*.iml
-/*.class
+In summary, Cassandra is a great choice when you need a highly scalable, fault-tolerant, and performant database system that can handle large amounts of data and high traffic.
